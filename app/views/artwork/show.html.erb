@@ -1,0 +1,9 @@
+<div id="front-home" class="header-name">
+  <h2>home</h2>
+</div>
+
+<div class="show-content">
+  <h3><%= artwork.name %></h3>
+  <%= render partial: 'shared/artwork', locals: { artwork: artwork, card_height: "700px", img_height: 600 } %>
+  <h4><%= artwork.medium %> <br> <%= artwork.size %> </h4>
+</div>
