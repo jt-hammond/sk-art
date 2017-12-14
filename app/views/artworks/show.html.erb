@@ -4,6 +4,6 @@
 
 <div class="show-content">
   <h3><%= @artwork.title %></h3>
-  <%= render partial: 'shared/artwork', locals: { artwork: @artwork, card_height: "700px", img_height: 600 } %>
+  <%= cl_image_tag @artwork.photo.path, width: 200, height: 300, crop: :fill %>
   <h4><%= @artwork.medium %> <br> <%= @artwork.category %> </h4>
 </div>

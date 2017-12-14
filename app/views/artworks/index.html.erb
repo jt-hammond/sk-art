@@ -3,7 +3,7 @@
 </div>
 
 <div class="index-content">
-  <%= @artworks.each do |artwork| %>
-      <%= render partial: 'shared/artwork', locals: { artwork: artwork } %>
+  <% @artworks.each do |artwork| %>
+    <%= render partial: 'shared/artwork', locals: { artwork: artwork, height: "400px"  }%>
   <% end %>
 </div>
