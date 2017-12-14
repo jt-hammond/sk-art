@@ -3,63 +3,63 @@
 #
 # Examples:
 #
-#   movies = Movie.create([[{ name: 'Star Wars'
+#   movies = Movie.create([{ name: 'Star Wars'
 #   Character.create(name: 'Luke', movie: movies.first)
 puts "Cleaning database..."
 Artwork.delete_all
 
 
 attributes = [
-  [[{
+  [{
     title: 'Turtles',
     category: '11 X 14',
     medium: 'Watercolor',
     price: '300',
     sold: false
     }, "app/assets/images/IMG_0371.jpg" ],
-  [[{
+  [{
     title: 'Three',
     category: '11 X 14',
     medium: 'Watercolor & Ink',
     price: '300',
     sold: false
     }, "app/assets/images/IMG_0376.jpg" ],
-  [[{
+  [{
     title: 'Sundown',
     category: '11 X 14',
     medium: 'Watercolor & Ink',
     price: '300',
     sold: false
     }, "app/assets/images/IMG_0383.jpg" ],
-  [[{
+  [{
     title: 'Somewhere There',
     category: '11 X 14',
     medium: 'Watercolor & Ink',
     price: '300',
     sold: false
     }, "app/assets/images/IMG_0387.jpg" ],
-  [[{
+  [{
     title: 'Fairy Tears',
     category: '11 X 14',
     medium: 'Watercolor & Ink',
     price: '300',
     sold: false
     }, "app/assets/images/IMG_0391.jpg" ],
-  [[{
+  [{
     title: 'Echos of the Walls',
     category: '11 X 14',
     medium: 'Ink',
     price: '300',
     sold: false
     }, "app/assets/images/IMG_0396.jpg" ],
-  [[{
+  [{
     title: 'Vibrations',
     category: '11 X 14',
     medium: 'Watercolor',
     price: '300',
-    sold: false''
+    sold: false
     }, "app/assets/images/IMG_0398.jpg" ],
-  [[{
+  [{
     title: 'Kiss 1',
     category: '11 X 14',
     medium: 'Watercolor',
@@ -81,7 +81,7 @@ attributes = [
     sold: true
     }, "app/assets/images/IMG_0432.jpg" ],
   [{
-    title: '',
+    title: 'Untitled',
     category: '11 X 14',
     medium: 'Watercolor',
     price: '300',
@@ -245,43 +245,43 @@ attributes = [
     title: 'The Awareness of Life and Time',
     category: '20 X 26',
     medium: 'Acrylic',
-    sold: false
     price: '575',
+    sold: false
     }, "app/assets/images/IMG_0578.jpg" ],
   [{
     title: 'Nomad',
     category: '11 X 14',
     medium: 'Indian Ink & Watercolor',
-    sold: false
     price: '300',
-    }, "app/assets/images/nomad.jpg" ],
+    sold: false
+    }, "app/assets/images/IMG_0367.jpg" ],
   [{
     title: 'Jade',
     category: '11 X 14',
     medium: 'Watercolor',
-    sold: false
     price: '300',
-    } , "app/assets/images/IMG_0342.jpg" ]
+    sold: false
+    } , "app/assets/images/IMG_0342.jpg" ],
   [{
     title: 'Pure Bliss',
     category: '11 X 14',
     medium: 'Ink',
-    sold: false
     price: '300',
-    } , "app/assets/images/IMG_0366.jpg" ]
+    sold: false
+    } , "app/assets/images/IMG_0366.jpg" ],
   [{
     title: 'Yearning',
     category: '11 X 14',
     medium: 'Watercolor',
-    sold: false
     price: '300',
-    } , "app/assets/images/IMG_0363.jpg" ]
+    sold: false
+    } , "app/assets/images/IMG_0363.jpg" ],
   [{
     title: 'Three Friends',
     category: '11 X 14',
     medium: 'Watercolor & Ink',
-    sold: false
     price: '300',
+    sold: false
     } , "app/assets/images/IMG_0401.jpg" ]
   ]
 

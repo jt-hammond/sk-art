@@ -21,6 +21,7 @@ gem 'carrierwave', '~> 0.11.2'
 gem "mini_magick"
 
 
+
 group :development, :test do
   gem 'pry-byebug'
   gem 'pry-rails'
