@@ -1,9 +1,10 @@
-<div id="front-home" class="header-name">
-  <h2>home</h2>
-</div>
-
-<div class="show-content">
-  <h3><%= @artwork.title %></h3>
-  <%= cl_image_tag @artwork.photo.path, width: 200, height: 300, crop: :fill %>
-  <h4><%= @artwork.medium %> <br> <%= @artwork.category %> </h4>
+<div class="container" id="show-container">
+  <div class="image">
+    <%= cl_image_tag @artwork.photo.path, width: 600, height: 450, crop: :fit %>
+  </div>
+  <div class="show-content container">
+    <h4 id="price">$<%= @artwork.price %></h4>
+    <h3><%=@artwork.title %></h3>
+    <h4 id="description"><%= @artwork.medium %><br> <%= @artwork.category %></h4>
+  </div>
 </div>

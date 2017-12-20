@@ -1,9 +1,13 @@
-<div id="front-home" class="header-name">
-  <h2>home</h2>
+<div id="artwork-banner" class="header-name">
+  <h2>my artwork</h2>
 </div>
 
-<div class="index-content">
-  <% @artworks.each do |artwork| %>
-    <%= render partial: 'shared/artwork', locals: { artwork: artwork, height: "400px"  }%>
+<div class="index-content container">
+  <% @artworks.each_slice(2) do |artworks| %>
+    <div class="index-row col-sm-6 col-xs-12">
+      <% artworks.each do |artwork| %>
+        <%= render partial: 'shared/artwork', locals: { artwork: artwork, height: "500px"  }%>
+      <% end %>
+    </div>
   <% end %>
 </div>
