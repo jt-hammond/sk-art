@@ -1,84 +1,94 @@
 // Specific CSS for your home-page
+
+a:hover {
+  text-decoration: none;
+}
 #front-box {
-  position: absolute;
-  right: 0;
-  width: 50vw;
-  height: 90vh;
-  bottom: 0;
+  flex: 1;
+  max-width: 50vw;
+  position: relative;
+  margin: 0;
   background-color: $light-gray;
-  z-index: 1;
-  box-shadow: 1px 1px 5px rgba(0,0,0, 0.2);
-  h2 {
+  &:hover {
+    cursor: pointer;
+    h3 {
+      opacity: 1;
+    }
+  }
+  h1 {
     color: $dark;
-    z-index: 3;
-    text-align: right;
+    text-align: left;
     font-weight: bold;
-    font-spacing: 0.2em;
-    margin-right: 20px;
-    margin-top: 5px;
+    letter-spacing: 0.15em;
+    line-height: 50vh;
+    margin-left: 50px;
+    text-shadow: 1px 1px rgba(196, 43, 34, 0.4);
+  }
+  h3 {
+    opacity: 0;
+    color: $dark;
+    font-size: 20px;
+    position: absolute;
+    top: calc(50% + 100px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all ease-in-out .3s;
+    i {
+      color: $dark;
+      font-size: 20px;
+    }
   }
 }
 
-#front-box-content {
-  text-align: right;
-  color: $dark;
-  z-index: 3;
-  margin: 0;
-  i {
-    font-size: 30px;
-    margin-right: 10px;
+#front-box-overlay  {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: all ease-in-out .3s;
+  background-color: $dark;
+  h3 {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    i {
+      color: white;
+      font-size: 20px;
+    }
   }
 }
 
 #front-content {
+  height: calc(100vh - 70px);
+  display: flex;
   width: 100vw;
-  height: 100vh;
-  background-color: $gray;
-  z-index: 0;
-  position: relative;
+  justify-content: space-between;
 }
 
-#front-name {
-  h1 {
-    color: $mid;
-    font-size: 58px;
-  }
-}
 
 #front-artwork {
-    display: block;
+  position: relative;
+  max-width: 50vw;
+  flex: 1;
+  z-index: 1;
+  box-shadow: 1px 1px 5px rgba(0,0,0, 0.2);
   img {
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    position: absolute;
-    margin: auto;
-    width: 80%;
-    z-index: 2;
-    margin-top: -50%;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  &:hover {
+    #front-box-overlay {
+      opacity: 0.8;
+      cursor: pointer;
+    }
   }
 }
-
-#front-home {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  span {
-    margin: 0;
-    font-size: 36px;
-    color: $dark;
-    font-weight: bold;
-  }
-}
-
-#front-container {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 100%;
-  margin: auto 0;
-  display: flex;
-  align-items: center;
-}
-
