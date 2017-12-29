@@ -1,10 +1,27 @@
 <div class="container" id="show-container">
   <div class="image">
+    <div class="previous-indicator">
+      <% unless @artwork.id == Artwork.last %>
+        <%= link_to "<i class='fa fa-circle' aria-hidden='true'></i>".html_safe, @artwork.previous %>
+        <% unless @artwork.id == (Artwork.last.id - 1) %>
+          <%= link_to "<i class='fa fa-circle' aria-hidden='true'></i>".html_safe, @artwork.previous.previous %>
+        <% end %>
+      <% end %>
+    </div>
     <%= cl_image_tag @artwork.photo.path, width: 600, height: 450, crop: :fit %>
+    <div class="next-indicator">
+      <% unless @artwork.id == Artwork.first %>
+        <%= link_to "<i class='fa fa-circle' aria-hidden='true'></i>".html_safe, @artwork.next %>
+        <% unless @artwork.id == (Artwork.first.id + 1) %>
+          <%= link_to "<i class='fa fa-circle' aria-hidden='true'></i>".html_safe, @artwork.next.next %>
+        <% end %>
+      <% end %>
+    </div>
   </div>
   <div class="show-content container">
     <h4 id="price">$<%= @artwork.price %></h4>
-    <h3><%=@artwork.title %></h3>
-    <h4 id="description"><%= @artwork.medium %><br> <%= @artwork.category %></h4>
+    <h4><%=@artwork.title %></h4>
+    <h4 id="description"><%= @artwork.medium %></h4>
+    <h4 id="category"><%= @artwork.category %></h4>
   </div>
 </div>

@@ -1,5 +1,5 @@
 <div class="navbar-wagon">
-  <div class="navbar-wagon-item hidden-sm">
+  <div class="navbar-wagon-item hidden-sm hidden-xs">
     <div class="dropdown">
       <i class="fa fa-caret-down dropdown-toggle" data-toggle="dropdown"> home</i>
       <ul class="dropdown-menu dropdown-menu-left navbar-wagon-dropdown-menu">
@@ -18,6 +18,12 @@
         <li><%= link_to 'home', root_path %></li>
       </ul>
     </div>
+  </div>
+
+  <div class="navbar-wagon-item right-navbar hidden-sm">
+    <%= link_to 'https://www.facebook.com/skhammondartist/', target: :_blank do %>
+      <i class="fa fa-facebook-square" aria-hidden="true"></i>
+    <% end %>
   </div>
 </div>
 

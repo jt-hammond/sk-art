@@ -18,16 +18,17 @@ a:hover {
   h1 {
     color: $dark;
     text-align: left;
-    font-weight: bold;
+    font-size: 4vw;
+    font-weight: 400;
     letter-spacing: 0.15em;
     line-height: 50vh;
     margin-left: 50px;
     text-shadow: 1px 1px rgba(196, 43, 34, 0.4);
   }
   h3 {
-    opacity: 0;
     color: $dark;
-    font-size: 20px;
+    opacity: 0;
+    font-size: 2vw;
     position: absolute;
     top: calc(50% + 100px);
     left: 50%;
@@ -35,7 +36,7 @@ a:hover {
     transition: all ease-in-out .3s;
     i {
       color: $dark;
-      font-size: 20px;
+      font-size: 2vw;
     }
   }
 }
@@ -53,14 +54,14 @@ a:hover {
   background-color: $dark;
   h3 {
     color: white;
-    font-size: 20px;
+    font-size: 2vw;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     i {
       color: white;
-      font-size: 20px;
+      font-size: 2vw;
     }
   }
 }
@@ -80,10 +81,12 @@ a:hover {
   z-index: 1;
   box-shadow: 1px 1px 5px rgba(0,0,0, 0.2);
   img {
+    padding: 0;
     display: block;
     width: 100%;
     height: 100%;
     border: none;
+    border-left: 2px solid lighten($mid, 40%);
   }
   &:hover {
     #front-box-overlay {

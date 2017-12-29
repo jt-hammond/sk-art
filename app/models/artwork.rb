@@ -7,4 +7,12 @@ class Artwork < ApplicationRecord
   validates :medium, presence: true
   validates :category, :inclusion => { :in => SIZE }
   validates :price, presence: true
+
+  def next
+    self.class.where("id > ?", id).first
+  end
+
+  def previous
+    self.class.where("id < ?", id).last
+  end
 end

@@ -38,6 +38,31 @@ p {
   text-decoration: italic;
 }
 
+#studio {
+  margin-bottom: 40px;
+}
+
+#map {
+  height: 50vh;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  img {
+    flex: 2;
+    padding-top: 80px;
+    border: none;
+  }
+}
+
+#map-content {
+  flex: 1;
+  padding-top: 80px;
+  h3 {
+    text-align: left;
+  }
+}
+
 #studio-images {
   float: left;
   img {
