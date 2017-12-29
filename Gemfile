@@ -9,6 +9,7 @@ gem 'puma'
 gem 'rails', '5.1.4'
 gem 'redis'
 gem 'activeadmin'
+gem 'mini_magick'
 
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass'
