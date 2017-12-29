@@ -1,12 +1,11 @@
-<div id="front-content">
+<div id="front-content" >
   <%= link_to about_path do %>
-    <div id="front-box">
+    <div id="front-box" class="col-sm-6 col-xs-12">
         <h1>S.K.Hammond Art</h1>
         <h3><i class="fa fa-arrow-left" aria-hidden="true"></i> Bio</h3>
     </div>
   <% end %>
-    <div id="front-artwork">
-    <%= image_tag("front-artwork.jpg")  %>
+    <div id="front-artwork" class="col-sm-6 col-xs-12">
     <%= link_to artworks_path do %>
       <div id="front-box-overlay">
         <h3>Artwork <i class="fa fa-arrow-right" aria-hidden="true"></i></h3>

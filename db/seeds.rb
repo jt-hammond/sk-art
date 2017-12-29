@@ -46,13 +46,6 @@ attributes = [
     sold: false
     }, "app/assets/images/IMG_0391.jpg" ],
   [{
-    title: 'Echos of the Walls',
-    category: '11 X 14',
-    medium: 'Ink',
-    price: '300',
-    sold: false
-    }, "app/assets/images/IMG_0396.jpg" ],
-  [{
     title: 'Vibrations',
     category: '11 X 14',
     medium: 'Watercolor',
@@ -101,6 +94,13 @@ attributes = [
     price: '400',
     sold: false
     }, "app/assets/images/IMG_0444.jpg" ],
+  [{
+    title: 'Echos of the Walls',
+    category: '11 X 14',
+    medium: 'Ink',
+    price: '300',
+    sold: false
+    }, "app/assets/images/IMG_0396.jpg" ],
   [{
     title: 'Choral',
     category: '11 X 14',
