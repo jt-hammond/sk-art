@@ -1,18 +1,18 @@
 <div class="container" id="show-container">
   <div class="image">
     <div class="previous-indicator">
-      <% unless @artwork.id == Artwork.last %>
+      <% unless @artwork.id == Artwork.first.id %>
         <%= link_to "<i class='fa fa-circle' aria-hidden='true'></i>".html_safe, @artwork.previous %>
-        <% unless @artwork.id == (Artwork.last.id - 1) %>
+        <% unless @artwork.id == (Artwork.first.id + 1) %>
           <%= link_to "<i class='fa fa-circle' aria-hidden='true'></i>".html_safe, @artwork.previous.previous %>
         <% end %>
       <% end %>
     </div>
     <%= cl_image_tag @artwork.photo.path, width: 600, height: 450, crop: :fit %>
     <div class="next-indicator">
-      <% unless @artwork.id == Artwork.first %>
+      <% unless @artwork.id == Artwork.last.id %>
         <%= link_to "<i class='fa fa-circle' aria-hidden='true'></i>".html_safe, @artwork.next %>
-        <% unless @artwork.id == (Artwork.first.id + 1) %>
+        <% unless @artwork.id == (Artwork.last.id - 1) %>
           <%= link_to "<i class='fa fa-circle' aria-hidden='true'></i>".html_safe, @artwork.next.next %>
         <% end %>
       <% end %>
