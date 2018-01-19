@@ -74,6 +74,7 @@ a:hover {
 
 
 #front-artwork {
+  background-image: image-url('front-artwork.jpg');
   background-size: cover;
   height: calc(100vh - 70px);
   overflow: hidden;

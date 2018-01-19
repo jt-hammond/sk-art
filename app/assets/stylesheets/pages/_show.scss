@@ -23,20 +23,11 @@ h3 {
 }
 
 .show-content {
-  display: flex;
-  align-items: center;
-  align-content: center;
-  justify-content: space-between;
   z-index: 0;
   margin-top: 40px;
-  #price {
-    text-align: left;
-  }
-  #description {
-    text-align: right;
-  }
   h4 {
     color: $dark;
+    text-align: center;
   }
 }
 
