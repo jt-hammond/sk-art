@@ -1,11 +1,14 @@
 <div id="front-content" >
-  <%= link_to about_path do %>
-    <div id="front-box" class="col-sm-6 col-xs-12">
-        <h1>S.K.Hammond Art</h1>
-        <h3><i class="fa fa-arrow-left" aria-hidden="true"></i> Bio</h3>
-    </div>
-  <% end %>
-    <div id="front-artwork" class="col-sm-6 col-xs-12">
+  <div class="hidden-sm hidden-xs">
+    <%= link_to about_path do %>
+      <div id="front-box" class="col-md-6 col-xs-12">
+          <h1>S.K.Hammond Art</h1>
+          <h3><i class="fa fa-arrow-left" aria-hidden="true"></i> Bio</h3>
+      </div>
+    <% end %>
+  </div>s
+  <div id="front-artwork" class="col-md-6 col-xs-12">
+    <h2 class="hidden-md hidden-lg hidden-xl">S.K.Hammond Art</h2>
     <%= link_to artworks_path do %>
       <div id="front-box-overlay">
         <h3>Artwork <i class="fa fa-arrow-right" aria-hidden="true"></i></h3>
