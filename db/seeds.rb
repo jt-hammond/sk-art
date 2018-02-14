@@ -225,28 +225,32 @@ attributes = [
     category: '20 X 26',
     medium: 'Watercolor & Ink',
     price: '575',
-    sold: false
+    sold: false,
+    vertical: true
     }, "app/assets/images/IMG_0549.jpg" ],
   [{
     title: 'Jubilation',
     category: '20 X 26',
     medium: 'Acrylic',
     price: '575',
-    sold: false
+    sold: false,
+    vertical: true
     }, "app/assets/images/IMG_0559.jpg" ],
   [{
     title: 'Amorphis',
     category: '20 X 26',
     medium: 'Watercolor & Ink',
     price: '575',
-    sold: false
+    sold: false,
+    vertical: true
     }, "app/assets/images/IMG_0570.jpg" ],
   [{
     title: 'The Awareness of Life and Time',
     category: '20 X 26',
     medium: 'Acrylic',
     price: '575',
-    sold: false
+    sold: false,
+    vertical: true
     }, "app/assets/images/IMG_0578.jpg" ],
   [{
     title: 'Nomad',
@@ -293,4 +297,5 @@ attributes.each do |attr|
 end
 
 puts "Finished!"
+AdminUser.delete_all
 AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?

@@ -8,7 +8,11 @@
         <% end %>
       <% end %>
     </div>
-    <%= cl_image_tag @artwork.photo.path, width: 600, height: 450, crop: :fit %>
+    <% if @artwork.vertical == true %>
+      <%= cl_image_tag @artwork.photo.path, width: 450, height: 600, crop: :fit %>
+    <% else %>
+      <%= cl_image_tag @artwork.photo.path, width: 600, height: 450, crop: :fit %>
+    <% end %>
     <div class="next-indicator hidden-sm hidden-xs">
       <% unless @artwork.id == Artwork.last.id %>
         <%= link_to "<i class='fa fa-circle' aria-hidden='true'></i>".html_safe, @artwork.next %>
