@@ -24,8 +24,11 @@ ActiveAdmin.register_page "Dashboard" do
       end
 
       column do
-        panel "Welcome" do
-          para "Welcome to S. K. Hammond Art."
+        panel "To Add Artworks" do
+          para "1. Click artwork on top bar"
+          para "2. Click add artwork"
+          para "3. Enter Required information"
+          para "4. Click submit"
         end
       end
     end
