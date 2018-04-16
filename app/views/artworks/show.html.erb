@@ -1,4 +1,8 @@
-<div class="container" id="show-container">
+  <div class="container" id="show-container content">
+ <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn">
+      <i class="glyphicon glyphicon-align-left"></i>
+      Toggle Sidebar
+  </button>
   <div class="image">
     <div class="previous-indicator hidden-sm hidden-xs">
       <% unless @artwork.id == Artwork.first.id %>
@@ -28,4 +32,5 @@
     <h4 class="col-md-3 d-block-sm offset-md-6" id="description"><%= @artwork.medium %></h4>
     <h4 class="col-md-3 d-block-sm offest-md-9" id="category"><%= @artwork.category %></h4>
   </div>
-</div>
+  </div>
+
