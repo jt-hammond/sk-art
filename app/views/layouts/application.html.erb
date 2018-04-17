@@ -18,10 +18,8 @@
     <%= stylesheet_link_tag 'application', media: 'all' %>
   </head>
   <body>
-      <div class="wrapper">
         <%= render "shared/navbar"%>
         <%= yield %>
-      </div>
       <%= javascript_include_tag 'application' %>
   </body>
 </html>
