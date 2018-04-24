@@ -1,7 +1,7 @@
 class Artwork < ApplicationRecord
   has_attachment :photo
 
-  SIZE = ['11 X 14', '18 X 24', '44 X 44', '20 X 26']
+  SIZE = ['11 X 14', '18 X 24', '44 X 44', '20 X 26', '24 X 48']
 
   validates :title, presence: true
   validates :medium, presence: true
