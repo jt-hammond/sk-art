@@ -6,13 +6,30 @@
           <h3><i class="fa fa-arrow-left" aria-hidden="true"></i> Bio</h3>
       </div>
     <% end %>
-  </div>s
-  <div id="front-artwork" class="col-md-6 col-xs-12">
-    <h2 class="hidden-md hidden-lg hidden-xl">S.K.Hammond Art</h2>
+  </div>
+    <div id="front-artwork" class="col-md-6 col-xs-12 carousel slide no-gutters" data-ride="carousel">
+      <h2 class="hidden-md hidden-lg hidden-xl">S.K.Hammond Art</h2>
+      <div class="carousel-inner">
+        <div class="item active">
+          <%= cl_image_tag @last_five[0].photo.path, class:"d-block w-100", :width=>0.40, :crop => :fill %>
+        </div>
+        <div class="item">
+          <%= cl_image_tag @last_five[1].photo.path, class:"d-block w-100", :width=>0.40, :crop => :fill  %>
+        </div>
+        <div class="item">
+          <%= cl_image_tag @last_five[2].photo.path, class:"d-block w-100", :width=>0.40, :crop => :fill  %>
+        </div>
+        <div class="item">
+          <%= cl_image_tag @last_five[3].photo.path, class:"d-block w-100", :width=>0.40, :crop => :fill  %>
+        </div>
+        <div class="item">
+          <%= cl_image_tag @last_five[4].photo.path, class:"d-block w-100", :width=>0.40, :crop => :fill  %>
+        </div>
+      </div>
     <%= link_to artworks_path do %>
       <div id="front-box-overlay">
         <h3>Artwork <i class="fa fa-arrow-right" aria-hidden="true"></i></h3>
       </div>
     <% end %>
-  </div>
+    </div>
 </div>
