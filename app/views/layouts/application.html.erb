@@ -10,8 +10,6 @@
 
       gtag('config', 'UA-117599066-1');
     </script>
-    <script type="text/javascript" src="components/bootstrap/dist/js/bootstrap.js"></script>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>S.K. Hammond Art</title>
@@ -20,8 +18,8 @@
     <%= stylesheet_link_tag 'application', media: 'all' %>
   </head>
   <body>
-        <%= render "shared/navbar"%>
-        <%= yield %>
+      <%= render "shared/navbar"%>
+      <%= yield %>
       <%= javascript_include_tag 'application' %>
   </body>
 </html>

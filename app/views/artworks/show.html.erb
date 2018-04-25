@@ -1,26 +1,26 @@
-  <div class="container" id="show-container content">
-  <div class="image">
-    <div class="previous-indicator hidden-sm hidden-xs">
-      <% unless @artwork.id == Artwork.first.id %>
-        <%= link_to "<i class='fa fa-circle' aria-hidden='true'></i>".html_safe, @artwork.previous %>
-        <% unless @artwork.id == (Artwork.first.id + 1) %>
-          <%= link_to "<i class='fa fa-circle' aria-hidden='true'></i>".html_safe, @artwork.previous.previous %>
-        <% end %>
+  <div class="container" id="show-container">
+  <div class="previous-indicator indicator hidden-sm hidden-xs ">
+    <% unless @artwork.id == Artwork.first.id %>
+      <%= link_to "<i class='fa fa-circle' aria-hidden='true'></i>".html_safe, @artwork.previous %>
+      <% unless @artwork.id == (Artwork.first.id + 1) %>
+        <%= link_to "<i class='fa fa-circle' aria-hidden='true'></i>".html_safe, @artwork.previous.previous %>
       <% end %>
-    </div>
-    <% if @artwork.vertical == true %>
-      <%= cl_image_tag @artwork.photo.path, width: 450, height: 600, crop: :fit %>
-    <% else %>
-      <%= cl_image_tag @artwork.photo.path, width: 600, height: 450, crop: :fit %>
     <% end %>
-    <div class="next-indicator hidden-sm hidden-xs">
-      <% unless @artwork.id == Artwork.last.id %>
-        <%= link_to "<i class='fa fa-circle' aria-hidden='true'></i>".html_safe, @artwork.next %>
-        <% unless @artwork.id == (Artwork.last.id - 1) %>
-          <%= link_to "<i class='fa fa-circle' aria-hidden='true'></i>".html_safe, @artwork.next.next %>
-        <% end %>
+  </div>
+  <div class="image">
+    <% if @artwork.vertical == true %>
+      <%= cl_image_tag @artwork.photo.path%>
+    <% else %>
+      <%= cl_image_tag @artwork.photo.path%>
+    <% end %>
+  </div>
+  <div class="next-indicator indicator hidden-sm hidden-xs">
+    <% unless @artwork.id == Artwork.last.id %>
+      <%= link_to "<i class='fa fa-circle' aria-hidden='true'></i>".html_safe, @artwork.next %>
+      <% unless @artwork.id == (Artwork.last.id - 1) %>
+        <%= link_to "<i class='fa fa-circle' aria-hidden='true'></i>".html_safe, @artwork.next.next %>
       <% end %>
-    </div>
+    <% end %>
   </div>
   <div class="show-content container row">
     <h4 class="col-md-3 d-block-sm" id="price">$<%= @artwork.price %></h4>
@@ -28,5 +28,5 @@
     <h4 class="col-md-3 d-block-sm offset-md-6" id="description"><%= @artwork.medium %></h4>
     <h4 class="col-md-3 d-block-sm offest-md-9" id="category"><%= @artwork.category %></h4>
   </div>
-  </div>
+</div>
 

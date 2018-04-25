@@ -1,5 +1,49 @@
 <div id="artwork-banner" class="header-name">
   <h2>artworks</h2>
+  <!-- Filters -->
+  <%= form_tag(artworks_path, method: :get) do %>
+      <%= select_tag(:size, options_for_select(Artwork::SIZE)) %>
+      <%= select_tag(:medium, options_for_select(Artwork::MEDIUM)) %>
+      <%= select_tag(:price, options_for_select(['$0-$299','$300-$699','$700-$999','+$1000'])) %>
+      <%= submit_tag "Filter" %>
+  <% end %>
+  <form action="">
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Size
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <% Artwork::SIZE.each do |size| %>
+          <a class="dropdown-item" href="#"><%= size %></a>
+        <% end %>
+      </div>
+    </div>
+  </form>
+  <form action="">
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Medium
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <% Artwork::MEDIUM.each do |medium| %>
+          <a class="dropdown-item" href="#"><%= medium %></a>
+        <% end %>
+      </div>
+    </div>
+  </form>
+  <form action="">
+     <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Price
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="#">$0 - $299</a>
+        <a class="dropdown-item" href="#">$300 - $699</a>
+        <a class="dropdown-item" href="#">$700 - $999</a>
+        <a class="dropdown-item" href="#">$1000+</a>
+      </div>
+    </div>
+  </form>
 </div>
 
 <div class="index-content container">

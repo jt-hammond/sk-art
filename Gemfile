@@ -10,6 +10,7 @@ gem 'rails', '5.1.4'
 gem 'redis'
 gem 'activeadmin'
 gem 'mini_magick'
+gem "lazyload-rails"
 
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass'

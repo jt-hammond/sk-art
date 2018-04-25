@@ -1,11 +1,15 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap-sprockets
-//= require_tree .
 //= require jquery-fileupload/basic
+//= require_tree .
 //= require cloudinary/jquery.cloudinary
 //= require attachinary
 
-$('#front-artwork').carousel({
-  interval: 2000
-})
+$(document).ready(function() {
+  $('.attachinary-input').attachinary();
+  $(function() {
+    $(".card-img").lazyload();
+  });
+});
+

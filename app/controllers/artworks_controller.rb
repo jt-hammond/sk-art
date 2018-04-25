@@ -1,6 +1,14 @@
 class ArtworksController < ApplicationController
   def index
-    @artworks = Artwork.all
+    if params[:medium]
+      @artworks = Artwork.medium_filter(params[:medium])
+    elsif params[:price]
+      @artworks = Artwork.price_filter(params[:price])
+    elsif params[:category]
+      @artworks = Artwork.size_filter(params[:category])
+    else
+      @artworks = Artwork.all
+    end
   end
 
   def show
