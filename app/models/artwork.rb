@@ -17,15 +17,45 @@ class Artwork < ApplicationRecord
     self.class.where("id < ?", id).last
   end
 
-  def price_filter(price)
-    self.class.where("price == ?",price)
-  end
-
-  def size_filter(size)
-    self.class.where("category == ?",size)
-  end
-
-  def medium_filter(medium)
-    self.class.where("medium == ?", medium)
-  end
+  # def self.filter(opts = {})
+  #   case opts[:price]
+  #   when 1
+  #     min = 0
+  #     max = 299
+  #   when 2
+  #     min = 300
+  #     max = 699
+  #   when 3
+  #     min = 700
+  #     max = 999
+  #   when 4
+  #     min = 1000
+  #   else
+  #     min = 0
+  #   end
+  #   medium = opts[:medium]
+  #   size = opts[:category]
+  #   artwork = Artwork.arel_table
+  #   # All Present
+  #   if min && max && size && medium
+  #     self.where(:price => min..max, :medium => opts[:medium], :category => opts[:category])
+  #   # No Medium
+  #   elsif min && max && size && !medium
+  #     self.where(:price => min..max, :category => opts[:category])
+  #   # No Size
+  #   elsif min && max && !size && medium
+  #     self.where(:price => min..max, :medium => opts[:medium])
+  #   # No Maximum
+  #   elsif min && !max && size && medium
+  #     self.where(artwork[:price].gt(min), :medium => opts[:medium], :category => opts[:category])
+  #   # No Maximum and No Size
+  #   elsif min && !max && !size && medium
+  #     self.where(artwork[:price].gt(min), :medium => opts[:medium])
+  #   # No Maximum and No Medium
+  #   elsif min && !max && !size && medium
+  #     self.where(artwork[:price].gt(min), :category => opts[:category])
+  #   else
+  #     self.all
+  #   end
+  # end
 end

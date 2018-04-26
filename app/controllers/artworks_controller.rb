@@ -1,14 +1,7 @@
 class ArtworksController < ApplicationController
   def index
-    if params[:medium]
-      @artworks = Artwork.medium_filter(params[:medium])
-    elsif params[:price]
-      @artworks = Artwork.price_filter(params[:price])
-    elsif params[:category]
-      @artworks = Artwork.size_filter(params[:category])
-    else
-      @artworks = Artwork.all
-    end
+    @q = Artwork.ransack(params[:q])
+    @artworks = @q.result(distinct: true).order(created_at: :desc)
   end
 
   def show

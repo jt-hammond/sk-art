@@ -290,6 +290,7 @@ DEPENDENCIES
   pry-rails
   puma
   rails (= 5.1.4)
+  ransack
   redis
   sass-rails
   simple_form
