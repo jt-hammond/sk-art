@@ -12,4 +12,3 @@ $(document).ready(function() {
     $(".card-img").lazyload();
   });
 });
-

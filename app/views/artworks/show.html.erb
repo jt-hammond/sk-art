@@ -1,9 +1,9 @@
   <div class="container" id="show-container">
   <div class="previous-indicator indicator hidden-sm hidden-xs ">
-    <% unless @artwork.id == Artwork.first.id %>
-      <%= link_to "<i class='fa fa-circle' aria-hidden='true'></i>".html_safe, @artwork.previous %>
-      <% unless @artwork.id == (Artwork.first.id + 1) %>
-        <%= link_to "<i class='fa fa-circle' aria-hidden='true'></i>".html_safe, @artwork.previous.previous %>
+    <% unless @artwork.id == Artwork.last.id %>
+      <%= link_to "<i class='fa fa-circle' aria-hidden='true'></i>".html_safe, @artwork.next %>
+      <% unless @artwork.id == (Artwork.last.id + 1) %>
+        <%= link_to "<i class='fa fa-circle' aria-hidden='true'></i>".html_safe, @artwork.next.next %>
       <% end %>
     <% end %>
   </div>
@@ -15,10 +15,10 @@
     <% end %>
   </div>
   <div class="next-indicator indicator hidden-sm hidden-xs">
-    <% unless @artwork.id == Artwork.last.id %>
-      <%= link_to "<i class='fa fa-circle' aria-hidden='true'></i>".html_safe, @artwork.next %>
-      <% unless @artwork.id == (Artwork.last.id - 1) %>
-        <%= link_to "<i class='fa fa-circle' aria-hidden='true'></i>".html_safe, @artwork.next.next %>
+    <% unless @artwork.id == Artwork.first.id %>
+      <%= link_to "<i class='fa fa-circle' aria-hidden='true'></i>".html_safe, @artwork.previous %>
+      <% unless @artwork.id == (Artwork.first.id - 1) %>
+        <%= link_to "<i class='fa fa-circle' aria-hidden='true'></i>".html_safe, @artwork.previous.previous %>
       <% end %>
     <% end %>
   </div>
