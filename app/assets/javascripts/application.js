@@ -8,7 +8,4 @@
 
 $(document).ready(function() {
   $('.attachinary-input').attachinary();
-  $(function() {
-    $(".card-img").lazyload();
-  });
 });

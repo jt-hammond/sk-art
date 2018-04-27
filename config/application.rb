@@ -1,6 +1,6 @@
-require File.expand_path('../boot', __FILE__)
-ENV['RANSACK_FORM_BUILDER'] = '::SimpleForm::FormBuilder'
-require 'rails/all'
+require_relative 'boot'
+
+require "rails"
 # Pick the frameworks you want:
 require "active_model/railtie"
 require "active_job/railtie"
