@@ -24,6 +24,12 @@ ActiveAdmin.register_page "Dashboard" do
       end
 
       column do
+        panel "Add Size" do
+
+        end
+      end
+
+      column do
         panel "To Add Artworks" do
           para "1. Click artwork on top bar"
           para "2. Click add artwork"

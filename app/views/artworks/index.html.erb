@@ -1,13 +1,7 @@
 <div id="artwork-banner" class="header-name">
   <h2>artworks</h2>
   <!-- Filters -->
-  <%= search_form_for @q do |f|%>
-      <%= f.select :category_matches, options_for_select(Artwork::SIZE), include_blank: true%>
-      <%= f.select :medium_matches, options_for_select(Artwork::MEDIUM), include_blank: true %>
-      <%= f.search_field :price_gteq %>
-      <%= f.search_field :price_lteq %>
-      <%= f.submit "Filter" %>
-  <% end %>
+
 </div>
 <div class="index-content container">
   <% @artworks.each_slice(2) do |artworks| %>

@@ -15,7 +15,7 @@ form do |f|
     f.inputs "Artwork Info" do
       f.input :title
       f.input :price
-      f.input :category, :as => :radio, :collection => ['11 X 14', '18 X 24', '44 X 44', '20 X 26']
+      f.input :category, :as => :radio, :collection => Artwork::SIZE
       f.input :medium
       f.input :sold, :as => :boolean
       f.input :vertical, :as => :boolean
