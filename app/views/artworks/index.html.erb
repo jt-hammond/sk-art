@@ -5,11 +5,11 @@
       <div class="row">
         <div class="col-md-3 col-md-offset-3">
           <%= f.label :category_matches, 'Size' %>
-          <%= f.select :category_matches, options_for_select(Artwork::SIZE), {class:"dropdown-item ", include_blank: true}, class: "btn btn-primary dropdown-toggle form-control" %>
+          <%= f.select :category_matches, options_for_select(Artwork::SIZE), {class:"dropdown-item ", include_blank: true}, class: "btn btn-default dropdown-toggle form-control" %>
         </div>
         <div class="col-md-3 no-gutters">
           <%= f.label :category_matches, 'Medium' %>
-          <%= f.select :medium_matches, options_for_select(Artwork::MEDIUM), {include_blank: true}, class: "btn btn-primary dropdown-toggle form-control" %>
+          <%= f.select :medium_matches, options_for_select(Artwork::MEDIUM), {include_blank: true}, class: "btn btn-default dropdown-toggle form-control" %>
         </div>
       </div>
       <br>
@@ -27,17 +27,21 @@
               <%= f.search_field :price_lteq, class:"form-control" %>
             </div>
           </div>
-          <%= f.submit "Filter", class:"btn btn-primary col-sm-1" %>
+          <%= f.submit "Filter", class:"btn btn-default col-sm-1" %>
         </div>
     <% end %>
   </div>
 </div>
 <div class="index-content container">
-  <% @artworks.each_slice(2) do |artworks| %>
-    <div class="index-row col-sm-6 col-xs-12">
-      <% artworks.each do |artwork| %>
-        <%= render partial: 'shared/artwork', locals: { artwork: artwork, height: "500px"  }%>
-      <% end %>
-    </div>
+  <% if @artworks.length > 0 %>
+    <% @artworks.each_slice(2) do |artworks| %>
+      <div class="index-row col-sm-6 col-xs-12">
+        <% artworks.each do |artwork| %>
+          <%= render partial: 'shared/artwork', locals: { artwork: artwork, height: "500px"  }%>
+        <% end %>
+      </div>
+    <% end %>
+  <% else %>
+    <h3><br>I am always working on new artwork, check back soon. <br> <%= link_to 'Click here to see all my artworks', artworks_path %></h3>
   <% end %>
 </div>
